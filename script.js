@@ -16,6 +16,11 @@ function getPlayer(e) {
 }
 
 reset.addEventListener('click',() => location.reload());
+// const rounds = () => 
+//     prompt("How many rounds you want to play?",5);
+window.onload = () => 
+    rounds = prompt("How many rounds you wants to play?",5);
+
 
 function computerPlay(){        //Computes random number and setting computer's choice
         let number = Math.floor(Math.random() * 3);
@@ -84,7 +89,10 @@ function computerPlay(){        //Computes random number and setting computer's 
     }
 
     function check(){
-        if(playerCt == 5){
+        if(Number(rounds)===0){
+            rounds = "5";
+        }
+        if(playerCt == Number(rounds)){
             comment.textContent = "YOU WON THE GAME :)";
             comment.style.fontWeight = "700";
             cScore.style.fontWeight = "300";
@@ -92,7 +100,7 @@ function computerPlay(){        //Computes random number and setting computer's 
             showRefresh.style.opacity = '1';
             // showRefresh.style.visibility = "visible";
             // showRefresh.setAttribute('display','initial');
-        }else if(computerCt == 5){
+        }else if(computerCt == Number(rounds)){
             comment.textContent = "YOU LOST THE GAME :(";
             comment.style.fontWeight = "700";
             pScore.style.fontWeight = "300";
