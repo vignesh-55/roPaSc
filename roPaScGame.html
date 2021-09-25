@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=NTR&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <section class="selection">
+        <button type="submit" class="selected" value="stone" onclick="game();">Stone</button>
+        <button type="submit" class="selected" value="paper">Paper</button>
+        <button type="submit" class="selected" value="scissor">Scissor</button>
+    </section>
+
+    <section class="scoreBoard">
+        <div id="commentBox"></div>
+        <div class="scores">
+            <div class="player">
+                <div class="you">You</div>
+                <div id="pScore"></div>
+            </div>
+            <div class="computer">
+                <div class="random">Random</div>
+                <div id="cScore"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reload">
+        <div class="refresh">
+            <button type="submit" id="refresh" value="refresh">Refresh to Play Again</button>
+        </div>
+    </section>
+</body>
+<script src="script.js"></script>
+</html>
