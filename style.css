@@ -74,6 +74,7 @@ button{
 
 #pScore,#cScore{
     border: 2px solid tomato;
+    border-radius: 10px;
     padding: 10px;
     font-size: 25px;
     font-weight: 600;
